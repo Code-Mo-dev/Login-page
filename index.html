@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width,
+    initial-scale=1.0,
+    maximum-scale=1.0,
+    user-scalable=no">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>login page</title>
+</head>
+    <body>
+        <section>
+            <div class="container">
+                <h1>Login</h1>
+                <form id="contactForm" action="#" method="POST">
+                    <div class="user">
+                        <ion-icon class="ion-icon-user" name="person"></ion-icon>
+                        <input id="user_name" type="text" name="userName" placeholder="User Name" required>
+                    </div>
+                    <div class="email">
+                        <ion-icon class="ion-icon-email" name="mail"></ion-icon>
+                        <input id="user_email" type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="password">
+                        <ion-icon class="ion-icon-password" name="lock-closed"></ion-icon>
+                        <input id="user_password" type="password" name="password" placeholder="password" required>
+                    </div>
+                    <div class="check-box">
+                        <input type="checkbox" name="check-box" required>
+                        <label>i'm agree to all <a target="_blank" href="terms.html">terms</a></label>
+                    </div>
+                        <button type="submit">Login</button>
+                </form>  
+                <p class="register_massege">Enter the site as a <a href="https://code-mo-dev.github.io/Portfolio/">visitor</a></p>
+                <!-- <p class="register_massege">Don't have a account <a href="https://code-mo-dev.github.io/Portfolio/">Register</a></p> -->
+            </div>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="../main.js"></script>
+    </body>
+</html>
+
+
+
+
